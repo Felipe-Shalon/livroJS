@@ -1,0 +1,129 @@
+<!-- EX1_1 HTML
+Na tela inicial ao entrar vai aparecer a mensagem do console.log
+e no sistema a mensagem do alert -->
+<script>
+    alert("Bem-Vindo ao Mundo JavaScript")
+    console.log("Meu primeiro programa...")
+</script>
+<!--Os programas deste capitulo são dedicados a apresentar os primerios passos de programação.
+Por isso, utilizaremos o comando/método alert() no lugar do console.log para exibir mensagens
+em uma caixa no navegador. Este e os demais métodos JS precisam estar delimitados por <script></script>
+
+EX1_2.HTML
+Vamos agora recer uma informação e apressentar uma mensagem utilizando a informação recebida. Para isso,
+vamos utilizar o conceito de variável visto na seção anterior e aprender um novo comando JavaScript.
+Para receber dados do usuário, uma das formas possíveis em JavaScript é utilizar o comando(método)
+prompt(), que exibe uma  caixa com um texto e um espaço para digitação. -->
+<meta charset="UTF-8">
+<script>
+    const nome = prompt("Qual é seu nome?")
+    alert("Olá " + nome)
+</script>
+<!-- Foi adicionado um comando HTML, também chamado de tag, ou neste caso metatag, que serve para
+ ajustar os caracteres de acentuação a serem exibidos pela página.
+ O método alert(), o texto entre aspas é um texto fixo a ser exibido na execução do comando,
+ concatenado (+) com a variável nome.
+
+ As variáveis em JS são: strings (variáveis de texto), number (números) e booleanos(true/false).
+ Saber o tipo de variável nos permite idenrificar quais oeperações são possíveis para esssa variável.
+ Vamos ver strings a seguir e números a seguir. -->
+ <script>
+    const a = "20"
+    const b = a * 2 // b = 40
+    const c = a / 2 // c = 10
+    const d = a - 2 // d = 18
+    const e = a + 2 // e = 202 ???
+    alert("e: " + e) //exibi o valor da variável e
+ </script>
+ <!--Quando realizamos a adição, o valor de retorno é diferente do padrão, pois a linguagem concatena (+)
+ o texto com o número.
+ Para resolver este problema, precisamos converter o texto em número. Isso pode ser feito, em JS,
+ pelos métodos Number(), perseInt() e parseFloat(). Vamos usar o métod Number.-->
+ <script>
+    const a1 = "20"
+    const b2 = a * 2 // b = 10
+    const c2 = a / 2 // c = 10
+    const d2 = a - 2 // d = 18
+    const e2 = Number(a) + 2 // 22
+    alert("e: " + e2) // e: 22
+ </script>
+ <!--A atribuição de um conteúdo entre aspas cria uma variável do tipo string. Para variáveis númericas,
+ não devem ser utiilizadas aspas.
+ As variáveis booleanas podem conter osvalores true ou false.
+ Uma variável que não receber nenhum comando vai se tornar underfined (indefinida).
+ Vamos usar o comando typeof, onde esse comando exibe o tipo da variável.-->
+<script>
+    const fruta = "Banana"
+    const preco = 3.50
+    const levar = true
+    let novoValor
+    console.log(typeof fruta) //String
+    console.log(typeof preco) //Number
+    console.log(typeof levar) //Boolean
+    console.log(typeof novoValor) //undefined
+</script>
+<!-- const exige uma atribuição de valor, que se manterá fixo durante o programa ou bloco de código
+ onde foi declarada.
+ Também é possível verificar se o número é inteiro ou possui decimais: Number.isInteger() faz isso.-->
+ <script>
+ console.log(Number.isInteger(12)) // true
+ console.log(Number.isInteger(3.50)) // true
+ </script>
+ <!--1.10 Exemplos de entrada, processamento e saída
+ No geral para realizar um programa simples, necessita os três passos ditos acima.
+ Vamos agora implementar alguns exemplos de algoritmos de programação sequencial, os quais realizam
+ essas etapas.
+ a) Elaborar um programa que leia um número. Calcule e informe o dobro desse número.
+ ° Entrada de dados: Ler o número
+ ° Processamento: Calcular o dobro
+ ° Saída: Informar o dobro-->
+ <meta charset="utf-8">
+ <script>
+    const num = prompt("Número: ") //Lê um dado de entrada
+    const dobro = num * 2 //Calcula o dobro
+    alert("Dobro é: " + dobro) //Exibi a resposta
+ </script>
+<!--Se quisermos calcular o dobro do número a partir de uma operação de adição, a conversão é necessária.
+Para isso, pode-se utilizar o método Number() direto na entrada de dados, como demostra a linha a seguir.
+const num = Number(prompt("Número: ")) // lê dado de entrada e converte para número
+
+b) Elaborar um programa que leia dois números. Calcule e informe a soma desses números.
+° Entrada de dados: Ler os dois números
+° Processamento: Calcular a soma
+° Saída: Informar a soma
+
+Para realizar a leitura dos dois números, vamos declarar as variáveis num1 e num2. 
+Lembre-se de que os nomes de variável não devem conter espaços e não podem começar pos dois números.
+
+Exemplo 1.6 - Soma de dois números -->
+<meta charset="utf-8">
+<script>
+    const num1 = Number(prompt("1° Número: ")) //Lê os números
+    const num2 = Number(prompt("2° Número: "))
+    const soma = num1 + num2 //Calcula soma
+    alert(`Soma é: ${soma}`) //exibi o resultado
+</script>
+
+<!--C) Elaborar um programa que leia o valor de um jantar. Calcule e informe o valor da taxa do garçom
+(10%) e o valor total a ser pago.
+
+Neste exercício vamos apresentar um exemplo de possíveis dados de entrada e dos erspectivos dados de 
+saída exibidos pelo programa (e deixar você enumerar as etapas)
+valor do jantar = 80
+Taxa do garçom = 10%
+Total a pagar = 88
+
+Tenha cuidado de digitar valores com decimais separados por ponto, e não virgula. Compreenda o enunciado
+do exercício e ao uso correto de variáveis. Utilizando variáveis, o programa vaireceber o valor do jantar,
+calcular corretamente a taxa do garçom e o valor total a ser pago.
+Abaixo é uma maneira de resolve, o método toFixed(2) é adicionado às variáveis de saída.
+Ele serve para indicar que o valor a ser apresentado deve conter duas casas decimais.
+
+Exemplo 1.7 - Cálculo do valor do jantar-->
+<meta charset="utf-8">
+<script>
+    const jantar = Number(prompt("Valor do jantar: "))//Lê o valor do jantar
+    const garcom = jantar * 0.10 //Calcula variáveis de saída
+    const total = jantar + garcom
+    alert(`Taxa garçom ${garcom.toFixed(2)}\nTotal: ${total.toFixed(2)}}`)
+</script>
