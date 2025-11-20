@@ -125,7 +125,7 @@ Exemplo 1.7 - Cálculo do valor do jantar-->
     const jantar = Number(prompt("Valor do jantar: "))//Lê o valor do jantar
     const garcom = jantar * 0.10 //Calcula variáveis de saída
     const total = jantar + garcom
-    alert(`Taxa garçom ${garcom.toFixed(2)}\nTotal: ${total.toFixed(2)}}`) // \n quebra a linha
+    alert(`Taxa garçom RR$${garcom.toFixed(2)}\nTotal: R$${total.toFixed(2)}}`) // \n quebra a linha
 </script>
 <!-- Para calcular a taxa do garçom, realizamos uma operação de multiplicação do valor do jantar por 0.10.
  Mas por que 0.10? Por que 10% é, como falamos: 10 por 100. Ou seja, 10/100, que resulta em 0.10
@@ -135,14 +135,14 @@ Exemplo 1.7 - Cálculo do valor do jantar-->
  const total = jantar + (jantar * 0.10) // ou então
  const total = jantar * 1.10 // desta forma 
 
- B) Elaborar um programa que leia a duração de uma viahem em dias e horas. Calcule e informe a duração
+ B) Elaborar um programa que leia a duração de uma viagem em dias e horas. Calcule e informe a duração
  total da viagem em número de horas.
  
  Exemplo de dados de entrada e saída do programa, para uma viagem que dura 2 dias + 5 horas.
  N° Dias: 2
  N° Horas: 5
  Total de Horas: 53 
- Com base nessas variáveis, precisamos pensar uma forma de calcular o valor total da shoras e converter isso
+ Com base nessas variáveis, precisamos pensar uma forma de calcular o valor total da horas e converter isso
  em uma fórmula matemática que esteja correta para quaisquer valores válidos de entrada.
  Sabendo que umm dia tem 24h, precisamos multiplicar o número de dias por 24 e adicionar o número de horas.
  
@@ -151,7 +151,7 @@ Exemplo 1.7 - Cálculo do valor do jantar-->
  <script>
     const dias = Number(prompt("N° Dias: ")) //Lê os dados de entrada
     const horas = Number(prompt("N° Horas: "))
-    const totalHoras = (dias * 24) + 24 //Calcula duração
+    const totalHoras = (dias * 24) + 5 //Calcula duração
     alert(`Total de Horas: ${totalHoras}`) //Exibi o total
  </script>
 
@@ -159,24 +159,50 @@ Exemplo 1.7 - Cálculo do valor do jantar-->
   A) Elaborar um programa que leia um número. Calcule e informe os seus vizinhos, ou seja, o número anterir e posterior.
   Exemplo:
   Número: 15
-  Vizinhos: 14 e 16
-  
-  B) Elaborar um programa para uma pizzaria, o qual leia o valor total de uma conta e quantos clientes
+  Vizinhos: 14 e 16 -->
+  <meta charset="utf-8">
+  <script>
+    const numero = Number(prompt("Digite um número"))
+    const numeroAnterior = numero - 1
+    const numeroPosterior = numero + 1
+    alert(`O numero escolhido foi ${numero}. O número anterior a ele é ${numeroAnterior} e o posterior ${numeroPosterior}`)
+  </script>
+  <!--B) Elaborar um programa para uma pizzaria, o qual leia o valor total de uma conta e quantos clientes
   vão pagá-las. Calcule e informe o valor a ser pago por cliente.
   Exemplo:
   Valor da compra: 99
   Número de clientes: 3
-  Valor por cliente: 30
-  
-  C) Elaborar um programa para uma loja, o qual leia o preço de um produto e informe as opções de pagamento da loja.
+  Valor por cliente: 30 -->
+  <meta charset="utf-8">
+  <script>
+    const valorCompra = Number(prompt("Digite o valor da compra."))
+    const numeroCliente = Number(prompt("Digite o número de clientes."))
+    const valorPorCliente = valorCompra / numeroCliente
+    alert(`O valor da compra por cliente fica R$${valorPorCliente.toFixed(2)}`)
+  </script>
+  <!--C) Elaborar um programa para uma loja, o qual leia o preço de um produto e informe as opções de pagamento da loja.
   Calcule o valor de pagamento À vista com 10% de desconto e o valor em 3x.
   Exemplo:
   Preço: 60
   Á vista: 54
-  Ou 3x de: 20
-  
-  D)Elaborar um programa que leia 2 notas de um aluno em uma disciplina. Calcule e informe a média das notas.
+  Ou 3x de: 20 -->
+  <meta charset="utf-8">
+  <script>
+    const desconto = 10
+    const valorProduto = Number(prompt("Digite o valor do produto."))
+    const aVista = valorProduto - (valorProduto * desconto / 100)
+    const ou3Vezes = valorProduto / 3
+    alert(`O pagamento a vista fica R$${aVista.toFixed(2)} ou em 3 vezes de R$${ou3Vezes.toFixed(2)}`)
+  </script>
+  <!--D)Elaborar um programa que leia 2 notas de um aluno em uma disciplina. Calcule e informe a média das notas.
   Exemplo:
   1° Nota: 7.0
   2° Nota: 8.0
   Média: 7.5-->
+<meta charset="utf-8">
+<script>
+    const nota1 = Number(prompt("Digite a nota do 1° Aluno"))
+    const nota2 = Number(prompt("Digite a nota do 2° Aluno"))
+    const mediaDasNotas = (nota1 + nota2) / 2
+    alert(`A media de nota do aluno foi ${mediaDasNotas}`)
+</script>

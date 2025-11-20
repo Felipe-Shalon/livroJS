@@ -1,0 +1,72 @@
+<!-- 
+ CAPITULO 2 INTEGRAÇÃO COM HTML
+ Para desenvolver uma página web, devemos criar um arquivo HTML, contendo as tags (comandos) HTML que definem
+ o conteúdo dos elementos que constituem a página. Depois de salvar o arquivo ele deverá ser aberto um navergador
+ web que renderizar (visualizar) esse documento.
+ Nenhum processo adicional é necessário pois os códigos de JS são desenvolvidos para adicionar um comportamento
+ á página, não é preciso compilar o programa ou outra ação adicional. O própio navegador web contém um interpretador
+ para os programas JS.
+ Eles são inseridos nas páginas web em uma seção delimitada pelas tags <script> </script> ou em um arquivo .js que
+ deve ser referenciado pelo documento HTML.
+ 
+ Os conceitos vistos no capitulo 1 serão agora empregados para recuperar informações digitadas em campos
+ de formulário de uma página e para exibir os resultados em parágrafos do documento HTML.
+ 
+ Vamos acrescentar diversos comando HTML. Alguns servem para definir a estrutura básica de uma página web. Outros,
+ para exibir textos e campos de formulário. Novos comandos JS também serão aborbados.-->
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body> <!--Define as seções principais da página-->
+<!--Na seção de cabeçalho (head), foram inseridas três metatags. O título define o texto a ser exibido em uma barra
+na aba superior do navegador.
+<meta cherset="utf-8"> serce para definir a página de códigos do documento.
+<meta name="viewport"... es´ta relacionadad ao processo de criação de páginas responsivas, ou seja, que respondem
+adequadamente aos diversos tipos de dispositivos utilizados pelos usuários, como computadores/tabletes/celulares.
+<meta http-equiv...> tem relação com os aspectos de compatibilidade entre navegadores.
+
+2.2 Cabeçalhos, parágrafos e campos de formulário
+Vamos acrescer outras tags HTML ao corpo (bordy) do documento. Digite as seguinte linhas: -->
+<h1> Programa Olá Você</h1>
+<form>
+    <p> Nome:
+        <input type="text" id="inNome">
+        <input type="submit" value="Mostrar">
+    </p>
+</form>
+<h3></h3>
+<!--A tag <h1> serve para destacar um texto com um conteúdo relevante no site.
+Para a entrada de dados, vamos criar campos de formulário, que são a principal forma de interagir com os usuários do site.
+Os campos de formulário devem estar entre as tags <form> </form>
+Para receber um texto do usuário, devemos utilizar a tag <imput type="text">
+Cada campo deve possuir um identificador (id) a ser utilizado no código JS para obter o conteúdo dentro do campo.
+A tag <input type="submit"...> como o nome sugere, serve para enviar os dados para um destino.
+Esses dois comandos estão dentro de um parágrafo criado com as tags <p> </p>.
+Já as tags <h3> </h3> criam uma nova linha, que será utilizada para exibir a mensagem de resposta no programa.
+
+O código completo.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Programa Olá Você</h1>
+    <form>
+        <p>Nome:
+            <input type="text" id="inNome">
+            <input type="submit" value="Mostrar">
+        </p>
+    </form>
+    <h3></h3>
+    <script src="js/ex2_1.js"></script>
+</body>
+</html>
